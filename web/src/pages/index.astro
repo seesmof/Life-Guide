@@ -1,5 +1,7 @@
 ---
-const title = "How to live?";
+import { getEntry } from "astro:content";
+const entry = await getEntry("translation", "en");
+const { Content, headings } = await entry.render();
 ---
 
 <html lang="en">
@@ -8,7 +10,7 @@ const title = "How to live?";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{entry.data.title}</title>
   </head>
-  <body> </body>
+  <body> <Content /> </body>
 </html>

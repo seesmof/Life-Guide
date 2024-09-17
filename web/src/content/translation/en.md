@@ -1,3 +1,6 @@
+---
+title: How to live? (BSB)
+---
 As Jesus went on from there, He saw a man named Matthew sitting at the tax booth. “Follow Me,” He told him, and Matthew got up and followed Him. ([Matthew 9:9](https://bolls.life/BSB/40/9/))
 
 Then Jesus traveled throughout the towns and villages, teaching as He made His way toward Jerusalem. “Lord,” someone asked Him, “will only a few people be saved?” Jesus answered, “Make every effort to enter through the narrow door. For many, I tell you, will try to enter and will not be able. After the master of the house gets up and shuts the door, you will stand outside knocking and saying, ‘Lord, open the door for us.’ But he will reply, ‘I do not know where you are from.’ Then you will say, ‘We ate and drank with you, and you taught in our streets.’ And he will answer, ‘I tell you, I do not know where you are from. Depart from me, all you evildoers.’ There will be weeping and gnashing of teeth when you see Abraham, Isaac, Jacob, and all the prophets in the kingdom of God, but you yourselves are thrown out. People will come from east and west and north and south, and will recline at the table in the kingdom of God. And indeed, some who are last will be first, and some who are first will be last.” ([Luke 13:22-30](https://bolls.life/BSB/42/13/))
