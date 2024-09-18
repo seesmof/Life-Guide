@@ -1,7 +1,8 @@
 ---
 import { getEntry } from "astro:content";
+
 const entry = await getEntry("translation", "en");
-const { Content, headings } = await entry.render();
+const { Content } = await entry.render();
 ---
 
 <html lang="en">
@@ -12,5 +13,5 @@ const { Content, headings } = await entry.render();
     <meta name="generator" content={Astro.generator} />
     <title>{entry.data.title}</title>
   </head>
-  <body> <Content /> </body>
+  <body class="bg-green-500"> <Content /> </body>
 </html>
