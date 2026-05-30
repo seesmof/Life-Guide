@@ -8,3 +8,6 @@
 >
 > **The Spirit and the bride say, “Come!” Let the one who hears say, “Come!” And let the one who is thirsty come, and the one who desires the water of life drink freely.** ([Revelation 22:17 BSB](https://bolls.life/BSB/66/22/))
 
+## Links
+
+<a href="https://www.flaticon.com/free-icons/manual" title="manual icons">Manual icons created by juicy_fish - Flaticon</a>
