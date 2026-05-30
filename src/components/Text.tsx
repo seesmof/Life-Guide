@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 
 interface Tip {
   content: string;
@@ -84,26 +85,38 @@ const tips: Tip[] = [
 ];
 
 const Text = () => {
+  const [input, setInput] = useState<string>("");
+
   return (
-    <>
-      {tips.map((tip, index) => (
-        <p
-          key={index}
-          onClick={() =>
-            navigator.clipboard.writeText(`${tip.content} (${tip.reference})`)
-          }
-          className="cursor-pointer"
-        >
-          {tip.content}{" "}
-          <Link
-            className="no-underline hover:underline underline-offset-4 italic"
-            href={`${baseUrl}${tip.link}`}
+    <div className="flex flex-col gap-3">
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        className="bg-white rounded-md outline outline-stone-300 py-2 px-4"
+      />
+      {tips
+        .filter(
+          (tip) => tip.content.includes(input) || tip.reference.includes(input),
+        )
+        .map((tip, index) => (
+          <p
+            key={index}
+            onClick={() =>
+              navigator.clipboard.writeText(`${tip.content} (${tip.reference})`)
+            }
+            className="cursor-pointer"
           >
-            ({tip.reference})
-          </Link>
-        </p>
-      ))}
-    </>
+            {tip.content}{" "}
+            <Link
+              className="no-underline hover:underline underline-offset-4 italic"
+              href={`${baseUrl}${tip.link}`}
+            >
+              ({tip.reference})
+            </Link>
+          </p>
+        ))}
+    </div>
   );
 };
 
