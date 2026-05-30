@@ -94,28 +94,35 @@ const Text = () => {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         className="bg-white rounded-md outline outline-stone-300 py-2 px-4"
+        placeholder="Search for a Bible verse here..."
       />
-      {tips
-        .filter(
-          (tip) => tip.content.includes(input) || tip.reference.includes(input),
-        )
-        .map((tip, index) => (
-          <p
-            key={index}
-            onClick={() =>
-              navigator.clipboard.writeText(`${tip.content} (${tip.reference})`)
-            }
-            className="cursor-pointer"
-          >
-            {tip.content}{" "}
-            <Link
-              className="no-underline hover:underline underline-offset-4 italic"
-              href={`${baseUrl}${tip.link}`}
+      <div className="flex flex-col md:gap-5 gap-3 lg:gap-7 mt-3 md:mt-5">
+        {tips
+          .filter(
+            (tip) =>
+              tip.content.toLowerCase().includes(input.toLowerCase()) ||
+              tip.reference.toLowerCase().includes(input.toLowerCase()),
+          )
+          .map((tip, index) => (
+            <p
+              key={index}
+              onClick={() =>
+                navigator.clipboard.writeText(
+                  `${tip.content} (${tip.reference})`,
+                )
+              }
+              className="cursor-pointer"
             >
-              ({tip.reference})
-            </Link>
-          </p>
-        ))}
+              {tip.content}{" "}
+              <Link
+                className="no-underline hover:underline underline-offset-4 italic"
+                href={`${baseUrl}${tip.link}`}
+              >
+                ({tip.reference})
+              </Link>
+            </p>
+          ))}
+      </div>
     </div>
   );
 };
